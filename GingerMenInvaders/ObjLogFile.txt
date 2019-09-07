@@ -1,0 +1,8 @@
+Unrecognized Token: : o
+Unrecognized Token: : s
+Unrecognized Token: : o
+Unrecognized Token: : s
+Unrecognized Token: : o
+Unrecognized Token: : s
+No texture coordinates supplied: 
+Loaded successfully

@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{52846BE8-74A6-4590-BD0C-ED7C4EBB73A0}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Debug\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)\..\..\SDK\Include;..\fmod\inc;$(IncludePath)</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)\..\..\SDK\Include;..\fmod\inc;$(IncludePath)</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)\..\..\SDK\Library\v100\Win32\Debug;..\fmod\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)\..\..\SDK\Library\v100\Win32\Release;..\fmod\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>Wm5CoreD.lib;Wm5MathematicsD.lib;Wm5WglApplicationsD.lib;Wm5ImagicsD.lib;Wm5PhysicsD.lib;Wm5WglGraphicsD.lib;opengl32.lib;glu32.lib;wsock32.lib;fmodex_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>Debug\ScorchedMars.exe</OutputFile>
+      <AdditionalLibraryDirectories>..\..\SDK\Library\$(PlatformToolset)\$(Platform)\$(Configuration)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)ScorchedMars.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy ..\fmod\lib\fmodex.dll Debug</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>Wm5Core.lib;Wm5Mathematics.lib;Wm5WglApplications.lib;Wm5Imagics.lib;Wm5Physics.lib;Wm5WglGraphics.lib;opengl32.lib;glu32.lib;wsock32.lib;fmodex_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>Release\ScorchedMars.exe</OutputFile>
+      <AdditionalLibraryDirectories>..\..\SDK\Library\$(PlatformToolset)\$(Platform)\$(Configuration)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy ..\fmod\lib\fmodex.dll Release</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Cannon.cpp" />
+    <ClCompile Include="CannonBalls.cpp" />
+    <ClCompile Include="explosion.cpp" />
+    <ClCompile Include="explosionController.cpp" />
+    <ClCompile Include="gettime.cpp" />
+    <ClCompile Include="glbmp.cpp" />
+    <ClCompile Include="network.cpp" />
+    <ClCompile Include="particle.cpp" />
+    <ClCompile Include="particle_engine.cpp" />
+    <ClCompile Include="RigidBall.cpp" />
+    <ClCompile Include="RigidBlock.cpp" />
+    <ClCompile Include="RigidCylinder.cpp" />
+    <ClCompile Include="ScorchedMars.cpp" />
+    <ClCompile Include="ScorchedMarsTerrain.cpp" />
+    <ClCompile Include="SMSound.c" />
+    <ClCompile Include="TerrainEffect.cpp" />
+    <ClCompile Include="texture.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Cannon.h" />
+    <ClInclude Include="CannonBalls.h" />
+    <ClInclude Include="explosion.hpp" />
+    <ClInclude Include="explosionController.hpp" />
+    <ClInclude Include="fmod.h" />
+    <ClInclude Include="fmod_codec.h" />
+    <ClInclude Include="fmod_dsp.h" />
+    <ClInclude Include="fmod_errors.h" />
+    <ClInclude Include="frameRate.hpp" />
+    <ClInclude Include="gettime.h" />
+    <ClInclude Include="glbmp.h" />
+    <ClInclude Include="network.hpp" />
+    <ClInclude Include="particle.hpp" />
+    <ClInclude Include="particle_engine.hpp" />
+    <ClInclude Include="RigidBall.h" />
+    <ClInclude Include="RigidBlock.h" />
+    <ClInclude Include="RigidCylinder.h" />
+    <ClInclude Include="ScorchedMars.h" />
+    <ClInclude Include="ScorchedMarsTerrain.h" />
+    <ClInclude Include="SMSound.h" />
+    <ClInclude Include="TerrainEffect.h" />
+    <ClInclude Include="texture.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\LibApplications\LibWglApplications_VC100.vcxproj">
+      <Project>{f033c1e9-c7a7-45fc-9175-117a8797b072}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\LibCore\LibCore_VC100.vcxproj">
+      <Project>{2da95cd7-8454-497e-b25d-6840527b73f3}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\LibGraphics\LibWglGraphics_VC100.vcxproj">
+      <Project>{2a7a6a7f-d459-447a-b901-e3a71c775b65}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\LibImagics\LibImagics_VC100.vcxproj">
+      <Project>{b2caee6f-98ae-4d65-ae9c-631b6fd81be4}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\LibMathematics\LibMathematics_VC100.vcxproj">
+      <Project>{05ab1253-998d-4170-b8eb-b092bede9593}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\LibPhysics\LibPhysics_VC100.vcxproj">
+      <Project>{31c32484-5292-4bd4-a89a-4fb089bb047f}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
