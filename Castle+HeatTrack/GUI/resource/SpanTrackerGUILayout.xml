@@ -1,0 +1,175 @@
+<Panel name        = "SpanTracker"
+       visible     = "true">
+
+  <Texture  type        = "TEXTURE_2D"
+            path        = "GUIElements.PNG" 
+            mode        = "MODULATE"
+            mipmap      = "true">
+
+    <Wrap   s           = "REPEAT"
+            t           = "REPEAT" />
+
+    <Filter mag         = "LINEAR" 
+            min         = "LINEAR_MIPMAP_LINEAR" />
+  </Texture>
+  
+  <Font path = "ArialSmall.tga" />
+  
+  <Panel name       = "Components"
+         layout     = "YAXIS"
+         drawBounds     = "true"
+         drawBackground = "true">
+    
+     <Label name = "Title">
+      <Text string = "SpanTracker" fontIndex ="1" >
+         <Color r = "255" g = "180" b = "40" />
+      </Text>
+     </Label>
+    
+    <Panel name       = "Controls"
+           layout     = "YAXIS">
+
+      <BordersColor x = "216" y = "169" z =  "0" />
+      <BGColor      x =  "50" y =  "50" z = "50" />
+      
+      <Panel name       = "TopControls"
+             layout     = "XAXIS">
+
+        <BordersColor x = "216" y = "169" z =  "0" />
+        <BGColor      x =  "50" y =  "50" z = "50" />
+        
+        <Label name = "Target">
+          <Text string = "Target:" fontIndex ="1">
+            <Color r = "255" g = "180" b = "40" />
+          </Text>
+        </Label>
+
+        <Separator ratio = "1.0"  />
+  
+        <CheckBox callbackString = "Start"
+              checked    = "false">
+          <Text   string  = "Start" />
+        </CheckBox>
+
+        <Separator ratio = "1.0"  />
+  
+        <CheckBox callbackString = "End"
+              checked    = "false">
+          <Text   string  = "End" />
+        </CheckBox>
+
+        <Separator ratio = "1.0"  />
+ 
+        <Button callbackString = "Reset">
+          <EdgeOffsets x = "0.0" y = "0.0" />
+          <Text    string  = "Reset" />
+        </Button>
+        
+      </Panel>
+      <Panel name       = "BottomControls"
+             layout     = "XAXIS">
+
+        <BordersColor x = "216" y = "169" z =  "0" />
+        <BGColor      x =  "50" y =  "50" z = "50" />
+
+        <Separator ratio = "1.0"  />
+
+        <CheckBox callbackString = "Heat"
+              checked    = "false">
+          <Text   string  = "Heat track" />
+        </CheckBox>
+
+      </Panel>
+      
+    </Panel>
+
+    <Panel name       = "Output"
+           layout     = "YAXIS">
+
+      <BordersColor x = "216" y = "169" z =  "0" />
+      <BGColor      x =  "50" y =  "50" z = "50" />
+      
+      <Panel name       = "DevicePositionPanel"
+             layout     = "XAXIS">
+
+        <BordersColor x = "216" y = "169" z =  "0" />
+        <BGColor      x =  "50" y =  "50" z = "50" />
+        
+        <Label name = "DevicePositionLabel">
+          <Text string = "Device:" fontIndex ="1">
+            <Color r = "255" g = "180" b = "40" />
+          </Text>
+        </Label>
+      
+        <TextBox callbackString = "DevicePosition">
+          <Dimensions x = "180" />
+          <Color      r = "100" g =  "100" b = "100" />
+          <Text   string  = "                          " />        
+        </TextBox>
+
+      </Panel>
+      
+      <Panel name       = "TargetPositionPanel"
+             layout     = "XAXIS">
+
+        <BordersColor x = "216" y = "169" z =  "0" />
+        <BGColor      x =  "50" y =  "50" z = "50" />
+
+        <Label name = "TargetPositionLabel">
+          <Text string = "Target:" fontIndex ="1">
+            <Color r = "255" g = "180" b = "40" />
+          </Text>
+        </Label>
+
+        <TextBox callbackString = "TargetPosition">
+          <Dimensions x = "180" />
+          <Color      r = "100" g =  "100" b = "100" />
+          <Text   string  = "                          " />
+        </TextBox>
+
+      </Panel>
+
+      <Panel name       = "TargetDistancePanel"
+             layout     = "XAXIS">
+
+        <BordersColor x = "216" y = "169" z =  "0" />
+        <BGColor      x =  "50" y =  "50" z = "50" />
+        
+        <Label name = "TargetDistanceLabel">
+          <Text string = "Distance:" fontIndex ="1">
+            <Color r = "255" g = "180" b = "40" />
+          </Text>
+        </Label>
+
+        <TextBox callbackString = "TargetDistance">
+          <Dimensions x = "120" />
+          <Color      r = "100" g =  "100" b = "100" />
+          <Text   string  = "                " />
+        </TextBox>
+
+      </Panel>
+      
+     <Panel name       = "InfoPanel"
+             layout     = "XAXIS">
+
+        <BordersColor x = "216" y = "169" z =  "0" />
+        <BGColor      x =  "50" y =  "50" z = "50" />
+
+        <Label name = "InfoLabel">
+          <Text string = "T/t, R/r: +/- movement, rotation rate" fontIndex ="1">
+            <Color r = "255" g = "180" b = "40" />
+          </Text>
+        </Label>
+
+      </Panel>
+
+    </Panel>
+
+  </Panel>
+
+  <TexCoordsDesc xStart = "201" yStart = "2" xEnd = "233" yEnd = "34" type = "SLIDER"/>
+  <TexCoordsDesc xStart = "167" yStart = "2" xEnd = "199" yEnd = "34" type = "CHECK_BOX"/>
+  <TexCoordsDesc xStart = "131" yStart = "1" xEnd = "165" yEnd = "35" type = "CHECK_BOX_MARK"/>
+  <TexCoordsDesc xStart =   "1" yStart = "1" xEnd =  "65" yEnd = "66" type = "RADIO_BUTTON"/>
+  <TexCoordsDesc xStart =  "66" yStart = "2" xEnd = "130" yEnd = "66" type = "CHECK_RB_MARK"/>
+</Panel>

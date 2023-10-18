@@ -1,0 +1,55 @@
+﻿  GUIAlphaElement.cpp
+  GUIButton.cpp
+  GUICheckBox.cpp
+  GUIClippedRectangle.cpp
+  GUIComboBox.cpp
+  GUIEvent.cpp
+  GUIFont.cpp
+  GUIFontManager.cpp
+  GUIFrame.cpp
+  GUILabel.cpp
+  GUIPanel.cpp
+  GUIRadioButton.cpp
+  GUIRectangle.cpp
+  GUISeparator.cpp
+  GUISlider.cpp
+  GUITabbedPanel.cpp
+  GUITexCoordDescriptor.cpp
+  GUIText.cpp
+  GUITextBox.cpp
+  GenUtils.cpp
+  Generating Code...
+  Compiling...
+  GLee.cpp
+  TextureUtils.cpp
+  TimeUtils.cpp
+  XMLUtils.cpp
+  Generating Code...
+  Font.cpp
+  glpng.c
+  adler32.c
+  crc32.c
+  infblock.c
+  infcodes.c
+  inffast.c
+  inflate.c
+  inftrees.c
+  infutil.c
+  zutil.c
+  png.c
+  pngerror.c
+  pngget.c
+  pngmem.c
+  pngpread.c
+  pngread.c
+  pngrio.c
+  pngrtran.c
+  pngrutil.c
+  pngset.c
+  Generating Code...
+  Compiling...
+  pngtrans.c
+  Generating Code...
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1361,5): warning MSB8012: TargetPath(C:\Users\tompo_000\Documents\games\WildMagic5\Projects\Castle\GUI\src\Release\GUI.lib) does not match the Library's OutputFile property value (C:\Users\tompo_000\Documents\games\WildMagic5\Projects\Castle\GUI\lib\sxmlgui.lib). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1363,5): warning MSB8012: TargetName(GUI) does not match the Library's OutputFile property value (sxmlgui). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+  sxmlgui.vcxproj -> C:\Users\tompo_000\Documents\games\WildMagic5\Projects\Castle\GUI\src\Release\GUI.lib
