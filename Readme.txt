@@ -3,6 +3,7 @@ WildMagic5 game engine games.
 Scorched Mars: conquer enemies on Mars.
 Ginger Men Invaders: defend Earth from Gingerbread men descending from space.
 Castle: explore a castle and measure distances with the SpanTracker device.
+Castle+HeatTrack: explore a castle and measure distances with the HeatTrack device.
 
 To install and build:
 1. Get WildMagic5 here: https://www.geometrictools.com/Downloads/Downloads.html
